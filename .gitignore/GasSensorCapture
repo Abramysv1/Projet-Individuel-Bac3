@@ -1,0 +1,18 @@
+import time
+import machine
+
+# Gas sensor
+adc = machine.ADC()
+adc.init(bits=12)
+apin = adc.channel(pin='P16', attn = ADC.ATTN_11DB)     # create an analog pin on P16 & connect gas sensor
+
+print("")
+print("Gas Sensor Warming up")
+# Need initial delay (180) # Gas sensor needs 3 minutes to warm up
+print ("Reading Gas Sensor...")
+value = apin()
+print("ADC count = %d" %(value))
+
+# Lopy has 1.1 V input range for ADC
+gas = (value-400) * (3900/4096.0)
+print ("Gas Level = %5.1f ppm" % (gas))
