@@ -1,0 +1,19 @@
+# main.py -- put your code here!
+from network import LoRa
+import socket
+import time
+import pycom
+
+lora = LoRa(mode=LoRa.LORA, frequency = 863000000)
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+s.setblocking(False)
+
+pycom.heartbeat(False)
+
+while True:
+    s.send('Ping')
+    pycom.rgbled(0x007f00)      #green
+    print ("Hello from LopyB")
+    time.sleep(0.05)
+    pycom.rgbled(0x000000)      #off
+    time.sleep(5)
