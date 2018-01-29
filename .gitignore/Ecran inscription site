@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Inscription</title>
+    </head>
+
+    <body>
+		<table>
+			<tr>
+				<td>Nom</td>
+				<td><input class="post" type="text" name="last_name" size="10" /></td>
+			</tr>
+			<tr>
+				<td>Prénom</td>
+				<td><input class="post" type="text" name="first_name" size="10" /></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input class="post" type="text" name="age" size="10" /></td>
+			</tr>
+			<tr>
+				<td>Adresse</td>
+				<td><input class="post" type="text" name="address" size="50" /></td>
+			</tr>
+			<tr>
+				<td>Numéros de téléphones :</td>
+			</tr>
+			<tr>
+				<td>Malade</td>
+				<td><input class="post" type="text" name="sick_phoneNumber" size="10" /></td>
+			</tr>
+			<tr>
+				<td>Aide médicale</td>
+				<td><input class="post" type="text" name="help_phoneNumber" size="10" /></td>
+			</tr>
+			<tr>
+				<td>Mail</td>
+				<td><input class="post" type="text" name="sick_phoneNumber" size="10" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input class="post" type="text" name="sick_phoneNumber" size="10" /></td>
+			</tr>
+			<tr>
+				<td>Comfirm password</td>
+				<td><input class="post" type="text" name="sick_phoneNumber" size="10" /></td>
+			</tr>
+			<tr>
+				<td><button type="button" size="10" onClick="openLinkIndex()">S'enregistrer</button></td>
+			</tr>
+		</table>
+    </body>
+</html>
+
+<script>
+function openLinkIndex(){
+	document.location.href = "index.html";
+}
+</script>
+
